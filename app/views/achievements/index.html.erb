@@ -1,0 +1,32 @@
+<h1>Listing achievements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Trophy</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @achievements.each do |achievement| %>
+      <tr>
+        <td><%= achievement.player.name %></td>
+        <td><%= achievement.trophy.name %></td>
+        <td><%= link_to 'Show', achievement %></td>
+        <td><%= link_to 'Edit', edit_achievement_path(achievement) %></td>
+        <td><%= link_to 'Destroy', achievement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Achievement', new_achievement_path %><br>
+<%= link_to 'New Player', new_player_path %><br>
+<%= link_to 'New Trophy', new_trophy_path %>
+
