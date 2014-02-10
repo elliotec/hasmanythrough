@@ -5,3 +5,8 @@ This app demonstrates the ability to create associations with join models using 
 
 
 Sources: [GitMatt's excellent blog post](http://www.gitmatt.com/posts/5)
+
+License
+===
+
+[MIT License](http://elliotec.mit-license.org/)
